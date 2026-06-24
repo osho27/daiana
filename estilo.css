@@ -196,7 +196,7 @@ a.aprender-mas:hover{
     list-style: none;
 }
 .complementario ul li{ /*** 4 ***/
-    background: url("imagenes/icon.png") no-repeat left center;
+    background: url("imagenes/icon.PNG") no-repeat left center;
     padding-left: 24px;
     margin-bottom: 8px;
 }
