@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Evaluación de Consumo de Alcohol</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulario de Evaluación de Consumo de Alcohol</h1>
+
+    <form action="https://formspree.io/f/xbdvdqdn" method="POST">
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="18" required>
+
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo">
+                <option value="">Seleccione</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Consumo de Alcohol</legend>
+
+            <label>
+                ¿Consume bebidas alcohólicas?
+            </label>
+            <input type="radio" name="consume" value="si"> Sí
+            <input type="radio" name="consume" value="no"> No
+
+            <label for="frecuencia">
+                ¿Con qué frecuencia consume alcohol?
+            </label>
+            <select id="frecuencia" name="frecuencia">
+                <option value="">Seleccione</option>
+                <option>Nunca</option>
+                <option>Mensualmente</option>
+                <option>2 a 4 veces al mes</option>
+                <option>2 a 3 veces por semana</option>
+                <option>4 o más veces por semana</option>
+            </select>
+
+            <label for="cantidad">
+                ¿Cuántas bebidas consume en un día típico?
+            </label>
+            <input type="number" id="cantidad" name="cantidad" min="0">
+
+            <label>
+                ¿Ha intentado reducir su consumo de alcohol?
+            </label>
+            <input type="radio" name="reducir" value="si"> Sí
+            <input type="radio" name="reducir" value="no"> No
+
+            <label>
+                ¿Ha sentido culpa por beber?
+            </label>
+            <input type="radio" name="culpa" value="si"> Sí
+            <input type="radio" name="culpa" value="no"> No
+
+            <label>
+                ¿Ha necesitado beber al despertar para sentirse mejor?
+            </label>
+            <input type="radio" name="despertar" value="si"> Sí
+            <input type="radio" name="despertar" value="no"> No
+
+            <label for="comentarios">
+                Comentarios adicionales:
+            </label>
+            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+        </fieldset>
+
+        <button type="submit">Enviar Formulario</button>
+
+    </form>
+
+</body>
+</html>
